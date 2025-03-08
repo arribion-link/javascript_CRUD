@@ -1,63 +1,61 @@
- // //callback()
-        // function fetchData(callback) {
-        //     setTimeout(
-        //         function me() {
-        //             callback("Data received!");
-        //         }, 2000);
-        // }
-
-        // fetchData(
-        //     function (message) {
-        //         console.log(message);
-        //     });
-
-
-        // //promise()
-        //         const fetchData = new Promise((resolve, reject) => {
-        //             setTimeout(() => {
-        //                 resolve("Data received!");
-        //             }, 2000);
-        //         });
-
-        //         fetchData.then((message) => console.log(message));
-
-        // //asynch function
-        // async function fetchData() {
-        //     return "Data received!";
-        // }
-
-        // fetchData().then(console.log);
+ //callback()
+        function fetchData(callback) {
+            setTimeout(
+                 function me() {
+                     callback("Data received!");
+                 }, 2000);
+         }
+         fetchData(
+            function (message) {
+                 console.log(message);
+         });
 
 
-        // //using await with promises()
-        // function getData() {
-        //     return new Promise((resolve) => {
-        //         setTimeout(() => resolve("Fetched Data"), 2000);
-        //     });
-        // }
+ //promise()
+                const fetchData = new Promise((resolve, reject) => {
+                     setTimeout(() => {
+                         resolve("Data received!");
+                    }, 2000);
+                });
 
-        // async function fetchData() {
-        //     console.log("Fetching...");
-        //     let data = await getData();
-        //     console.log(data);
-        // }
+                fetchData.then((message) => console.log(message));
 
-        // fetchData();
+ // //asynch function
+         async function fetchData() {
+             return "Data received!";
+         }
+
+         fetchData().then(console.log);
+
+
+ // //using await with promises()
+         function getData() {
+             return new Promise((resolve) => {
+                 setTimeout(() => resolve("Fetched Data"), 2000);
+             });
+         }
+         async function fetchData() {
+             console.log("Fetching...");
+             let data = await getData();
+             console.log(data);
+         }
+
+         fetchData();
 
 
 
-        // //async/await   error handling
-        //         async function fetchData() {
-        //             try {
-        //                 let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-        //                 let data = await response.json();
-        //                 console.log(data);
-        //             } catch (error) {
-        //                 console.error("Error fetching data:", error);
-        //             }
-        //         }
+// //async/await   error handling
+                 async function fetchData() {
+                     try {
+                         let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+                        let data = await response.json();
+                        console.log(data);
+                    } catch (error) {
+                        console.error("Error fetching data:", error);
+                    }
+                }
 
-        //         fetchData();
+                fetchData();
 
 
 
